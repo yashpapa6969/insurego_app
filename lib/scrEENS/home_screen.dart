@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:insurego/resources/auth_methods.dart';
+import 'package:insurego/scrEENS/rewards.dart';
+import 'package:insurego/scrEENS/stcok_analysis.dart';
 import 'package:insurego/screens/history_meeting_screen.dart';
 import 'package:insurego/screens/meeting_screen.dart';
 import 'package:insurego/utils/colors.dart';
 import 'package:insurego/widgets/custom_buttom.dart';
+import 'package:insurego/scrEENS/homepage.dart';
+
+import 'academy.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -21,9 +27,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   List<Widget> pages = [
+    HomePage(),
     MeetingScreen(),
-    const HistoryMeetingScreen(),
-    const Text('Contacts'),
+    StockAnalysis(),
+    Academy(),
+    const Rewards(),
+
     CustomButton(text: 'Log Out', onPressed: () => AuthMethods().signOut()),
   ];
 
@@ -33,7 +42,15 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         elevation: 0,
-        title: const Text('Meet & Chat'),
+        title: const Text('INSUREGO',
+          style: TextStyle(
+            fontFamily: 'Source Sans Pro',
+            color: Colors.teal,
+            fontSize: 20.0,
+            letterSpacing: 2.5,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
       ),
       body: pages[_page],
@@ -48,21 +65,33 @@ class _HomeScreenState extends State<HomeScreen> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.comment_bank,
+              Icons.add_call,
             ),
-            label: 'Meet & Char',
+            label: 'Products',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.lock_clock,
+              Icons.add_business_outlined,
             ),
-            label: 'Meetings',
+            label: 'Consultancy',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.person_outline,
+              Icons.analytics_sharp,
             ),
-            label: 'Contacts',
+            label: 'Analysis',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.monetization_on,
+            ),
+            label: 'Rewards',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.cast_for_education_sharp,
+            ),
+            label: 'Academy',
           ),
           BottomNavigationBarItem(
             icon: Icon(

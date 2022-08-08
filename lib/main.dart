@@ -1,10 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:insurego/resources/auth_methods.dart';
+import 'package:insurego/scrEENS/rewards.dart';
 import 'package:insurego/scrEENS/home_screen.dart';
 import 'package:insurego/screens/login_screen.dart';
 import 'package:insurego/screens/video_call_screen.dart';
 import 'package:insurego/utils/colors.dart';
+import 'package:get/get.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
 
       debugShowCheckedModeBanner: false,
 

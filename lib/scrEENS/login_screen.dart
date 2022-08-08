@@ -18,10 +18,11 @@ class _LoginScreenState extends State<LoginScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text(
-            'Start or join a meeting',
+            'INSUREGO',
             style: const TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
+              fontFamily: 'Pacifico',
+              fontSize: 24.0,
+              color: Colors.white,
             ),
           ),
           Padding(
@@ -38,6 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
             },
           ),
         ],
+
       ),
     );
   }

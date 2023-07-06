@@ -1,2 +1,2 @@
-# insurego
-it was an attempt to solve problem statemetn ss1237 given by bajaj finserv smart india hackathon 2022
+# Insurego
+An attempt to solve the problem statement SS1237 presented by Bajaj Finserv at Smart India Hackathon 2022
